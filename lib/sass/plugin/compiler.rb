@@ -473,7 +473,8 @@ module Sass::Plugin
     end
 
     def css_filename(name, path)
-      "#{path}#{File::SEPARATOR unless path.end_with?(File::SEPARATOR)}#{name}".
+      #"#{path}#{File::SEPARATOR unless path.end_with?(File::SEPARATOR)}#{name}".
+      "#{path}#{File::SEPARATOR}#{name}".
         gsub(/\.s[ac]ss$/, '.css')
     end
 
